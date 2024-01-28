@@ -8,6 +8,7 @@ body {
   margin: auto; 
   font-family: "IBM Plex Mono", Raleway;
   font-size: 18px;
+  font-weight: 400;
 }
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
@@ -59,7 +60,9 @@ body {
   display: grid;
   color: var( --main-subtitle-color, #000028);
   align-content: center;
+  justify-content: end;
 }
 .header__section-text {
   background-color: var(--main-subtitle-background-color, #FF0070);
+  font-weight: 700;
 }
