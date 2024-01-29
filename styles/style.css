@@ -1,14 +1,15 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 body {
   display: flex;
+  box-sizing: border-box;
   flex-direction: column;
   height: 100%;
-  width: 375px; 
-  box-sizing: border-box;
+  max-width: var(--main-width); 
   margin: auto; 
   font-family: "IBM Plex Mono", Raleway;
   font-size: 18px;
   font-weight: 400;
+  
 }
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
@@ -17,9 +18,10 @@ body {
 .header {
   display: grid;
   background-image: url(../images/cover-image-dark.png);
-  padding: 10px;  /* будет меняться при изменении width*/
   grid-template-rows: 1fr 1fr 1fr;
   height: 668px;
+  padding: var(--main-padding);  /* будет меняться при изменении width*/
+  width: 100%;
 }
 
 .header__theme-menu {
@@ -36,18 +38,23 @@ body {
 }
 
 .header__theme-menu-item {
-  padding:0 13px 0 13px;
   color: var(--header-list-item-color, #FF0070);
   text-transform: lowercase;
 }
 
 .header__theme-menu-button {
-  border: 0;
   background: none;
   cursor: pointer;
+  padding:0 13px 0 13px;
+}
+
+.header__theme-menu-button_active {
+  border: 1px solid currentColor;
+  pointer-events: none;
 }
 
 .header__title {
+  max-width: calc(var(--main-width) - var(--main-padding) * 2);
   color: var(--header-title-color, #DB00FF);
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: 82.5%;
@@ -63,6 +70,7 @@ body {
   justify-content: end;
 }
 .header__section-text {
+  display: grid;
   background-color: var(--main-subtitle-background-color, #FF0070);
   font-weight: 700;
 }
