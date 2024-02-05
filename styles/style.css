@@ -21,7 +21,7 @@ body {
 .header {
   position: relative;
   display: grid;
-  background-image: url(../images/cover-image-dark.png);
+  background-image: var(--header-image);
   grid-template-rows: 1fr 1fr 1fr;
   height: 668px; /*Изменяется*/
   padding: var(--main-largest-padding);  /* будет меняться при изменении width*/
@@ -42,6 +42,7 @@ body {
 }
 
 .decoration-line-top::after {
+  display: var(--decoration-style);
   position: absolute;
   right: 9px;
   top: 8px;
@@ -55,6 +56,7 @@ body {
 }
 
 .decoration-line-top::before {
+  display: var(--decoration-style);
   position: absolute;
   content: "REC";
   color: var(--decoration-line);
@@ -157,7 +159,8 @@ body {
 }
 
 .main__section-text-link {
-
+  text-decoration: none;
+  text-shadow: 2px 1px 0px var(--link-color ,#FF0070);
 }
 
 .main__section-subtitle-item {

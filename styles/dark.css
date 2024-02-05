@@ -3,10 +3,30 @@
   здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */
-
-.page.theme_dark {
-  /* сохраните этот селектор в приведённом виде.
-    Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
-  */
+:root.theme-dark {
+  --header-image: url(../images/cover-image-dark.png);
+  --header-title-color:#DB00FF;
+  --accent-title-color: #FF0070;
+  --header-list-item-color: #FF0070;
+  --decoration-line: #FF0070;
+  --main-title-color: #FF0070;
+  --main-text-color: #F1B2CE;
+  --main-subtitle-color: #000028;
+  --main-subtitle-background-color: #FF0070;
+  --website-main-background-color: #000028;
+  --link-color: #FF0070;  
 }
+.page.theme_dark {
+  --header-image: url(../images/cover-image-dark.png);
+  --header-title-color:#DB00FF;
+  --accent-title-color: #FF0070;
+  --header-list-item-color: #FF0070;
+  --decoration-line: #FF0070;
+  --main-title-color: #FF0070;
+  --main-text-color: #F1B2CE;
+  --main-subtitle-color: #000028;
+  --main-subtitle-background-color: #FF0070;
+  --website-main-background-color: #000028;
+  --link-color: #FF0070;  
+}
+
