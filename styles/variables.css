@@ -11,8 +11,10 @@
   --main-text-color: #F1B2CE;
   --main-subtitle-color: #000028;
   --main-subtitle-background-color: #FF0070;
-  --main-padding: 10px;
-  --main-width: 375px;
+  --website-main-background-color: #000028;
+  --main-largest-padding: 10px;
+  --main-width: 375px; /*Изменяется*/
   --main-section-padding: 50px;
-  --section-padding: 40px;
+  --section-padding-body: 40px;
+  --section-subtitle-picture-margin: 10px;
 }

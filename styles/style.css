@@ -1,18 +1,20 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
+
 body {
-  display: flex;
+  display: grid;
   box-sizing: border-box;
   flex-direction: column;
-  height: 100%;
+  height: 100%; 
   max-width: var(--main-width); 
   margin: auto; 
   font-family: "IBM Plex Mono", Raleway;
   font-size: 18px;
   font-weight: 400;
-  
-  
+  gap: var(--section-padding-body);
 }
 .page {
+  background-color: var( --website-main-background-color);
+  background-attachment: fixed;
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
 }
 
@@ -21,9 +23,9 @@ body {
   display: grid;
   background-image: url(../images/cover-image-dark.png);
   grid-template-rows: 1fr 1fr 1fr;
-  height: 668px;
-  padding: var(--main-padding);  /* будет меняться при изменении width*/
-  width: 100%;
+  height: 668px; /*Изменяется*/
+  padding: var(--main-largest-padding);  /* будет меняться при изменении width*/
+  width: 100%; /*Изменяется*/
 }
 
 .decoration-line {
@@ -33,8 +35,8 @@ body {
 }
 
 .decoration-line-top {
-  top: var(--main-padding);
-  right: var(--main-padding); 
+  top: var(--main-largest-padding);
+  right: var(--main-largest-padding); 
   border-top: 1px solid var(--decoration-line) ;
   border-right: 1px solid var(--decoration-line) ;
 }
@@ -60,8 +62,8 @@ body {
 }
 
 .decoration-line-bottom {
-  bottom: var(--main-padding);
-  left: var(--main-padding); 
+  bottom: var(--main-largest-padding);
+  left: var(--main-largest-padding); 
   border-bottom: 1px solid var(--decoration-line) ;
   border-left: 1px solid var(--decoration-line) ;
 }
@@ -96,13 +98,14 @@ body {
 }
 
 .header__title {
-  max-width: calc(var(--main-width) - var(--main-padding) * 2);
+  max-width: calc(var(--main-width) - var(--main-largest-padding) * 2);
   color: var(--header-title-color, #DB00FF);
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: 82.5%;
   text-shadow: 4px 4px 0 var(--accent-title-color, #FF0070);
   justify-content: start;
   align-content: center;
+  font-weight: 700;
 }
 
 .header__section {
@@ -121,12 +124,11 @@ body {
 .main {
   display: grid;
   width: 100%;
-  padding: var(--main-padding);
+  padding-left: var(--main-largest-padding);
+  padding-right: var(--main-largest-padding);
   font-weight: 400;
   line-height: 130%;
-  margin-top:  var( --section-padding);
-  margin-bottom:  var( --section-padding);
-  gap: 20px;
+  gap: var(--main-section-padding);
 }
 
 .main__section {
@@ -137,6 +139,11 @@ body {
 .main__section-title {
   font-weight: 700;
   color: var(--main-title-color);
+}
+
+.main__section-text-conteiner {
+  display: grid; 
+  gap: 10px;
 }
 
 .main__section-subtitle {
@@ -174,3 +181,42 @@ body {
 .main__section-icon {
   width: 100%;
 }
+
+.main__section-subtitle-picture {
+  margin-bottom: var(--section-subtitle-picture-margin);
+}
+
+.footer {
+  position: relative;
+  display: grid;
+  padding: var(--main-largest-padding);
+  width: 100%;
+  height: 668px; /*Изменяется*/
+}
+
+.footer__title {
+  display: grid;
+  color: var(--header-title-color, #DB00FF);
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 82.5%;
+  text-shadow: 2px 2px 0px var(--accent-title-color ,#FF0070);
+  justify-content: center;
+  align-content: center;
+  font-weight: 700;
+  font-family: 'IBM Plex Mono';
+}
+
+.footer-decoration-line-top {
+  top: var(--main-largest-padding);
+  right: var(--main-largest-padding); 
+  border-top: 1px solid var(--decoration-line) ;
+  border-right: 1px solid var(--decoration-line) ;  
+}
+
+.footer-decoration-line-buttom {
+  bottom: var(--main-largest-padding);
+  left: var(--main-largest-padding); 
+  border-bottom: 1px solid var(--decoration-line) ;
+  border-left: 1px solid var(--decoration-line) ;
+}
+
