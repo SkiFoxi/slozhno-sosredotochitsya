@@ -15,6 +15,7 @@
   --main-subtitle-background-color: #FF0070;
   --website-main-background-color: #000028;
   --link-color: #FF0070;
+  --menu-button-hover-color: 255, 0, 112, 0.4;
   --main-largest-padding: 10px;
   --main-width: 375px; /*Изменяется*/
   --main-section-padding: 50px;
@@ -70,3 +71,12 @@
     grid-template-rows: auto 1fr;
   }
 } 
+
+@media (max-height: 450px) {
+  .decoration-line-top {
+    display: none;
+  }
+  .decoration-line-bottom {
+    display: none;
+  }
+}

@@ -6,6 +6,7 @@
 :root.theme-dark {
   --header-image: url(../images/cover-image-dark.png);
   --decoration-style: "";
+  --menu-button-hover-color: 255, 0, 112, 0.4;
   --header-title-color:#DB00FF;
   --accent-title-color: #FF0070;
   --header-list-item-color: #FF0070;
@@ -21,6 +22,7 @@
 .page.theme_dark {
   --header-image: url(../images/cover-image-dark.png);
   --decoration-style: "";
+  --menu-button-hover-color: 255, 0, 112, 0.4;
   --header-title-color:#DB00FF;
   --accent-title-color: #FF0070;
   --header-list-item-color: #FF0070;
@@ -37,6 +39,7 @@
   :root {
     --header-image: url(../images/cover-image-dark.png);
     --decoration-style: "";
+    --menu-button-hover-color: 255, 0, 112, 0.4;
     --header-title-color:#DB00FF;
     --accent-title-color: #FF0070;
     --header-list-item-color: #FF0070;

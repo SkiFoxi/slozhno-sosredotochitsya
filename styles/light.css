@@ -15,7 +15,8 @@
   --main-subtitle-color: #353430;
   --main-subtitle-background-color: #FF8DCB;
   --website-main-background-color: #FFF1F7;
-  --link-color: #FF8DCB;    
+  --link-color: #FF8DCB;
+  --menu-button-hover-color: 53, 52, 48, 0.4;    
 }
 
 .page.theme_light {
@@ -31,6 +32,7 @@
   --main-subtitle-background-color: #FF8DCB;
   --website-main-background-color: #FFF1F7;
   --link-color: #FF8DCB;
+  --menu-button-hover-color: 53, 52, 48, 0.4;
 }
 
 @media (prefers-color-scheme: light) {
@@ -46,6 +48,7 @@
       --main-subtitle-color: #353430;
       --main-subtitle-background-color: #FF8DCB;
       --website-main-background-color: #FFF1F7;
-      --link-color: #FF8DCB;          
+      --link-color: #FF8DCB; 
+      --menu-button-hover-color: 53, 52, 48, 0.4;         
     }
 }
