@@ -5,25 +5,26 @@ body {
   box-sizing: border-box;
   flex-direction: column;
   height: 100%; 
-  max-width: 768; 
   margin: auto; 
-  font-family: "IBM Plex Mono", Bold Regular;
+  font-family: "IBM Plex Mono", Regular;
   font-size: 18px;
   font-weight: 400;
   gap: var(--section-padding-body);
 }
 .page {
-  background-color: var( --website-main-background-color);
+  background-image: var(--header-image);
+  background-repeat: no-repeat;
+  background-size: 100vw 100vh;
+  object-fit: cover;
+  background-position: center;
   background-attachment: fixed;
+  background-color: var( --website-main-background-color);
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
 }
 
 .header {
   position: relative;
   display: grid;
-  background-image: var(--header-image);
-  background-repeat: no-repeat;
-  background-size: cover;
   grid-template-rows: 1fr 1fr 1fr;
   height: 100vh; /*Изменяется*/
   padding: var(--main-largest-padding);  /* будет меняться при изменении width*/
@@ -115,7 +116,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   color: var(--header-title-color, #DB00FF);
-  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-size: var(--largest-title-font-size);
   line-height: 82.5%;
   text-shadow: 4px 4px 0 var(--accent-title-color, #FF0070);
   justify-content: start;
@@ -249,7 +250,7 @@ body {
 .footer__title {
   display: grid;
   color: var(--header-title-color, #DB00FF);
-  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-size: var(--largest-title-font-size);
   line-height: 82.5%;
   text-shadow: 2px 2px 0px var(--accent-title-color ,#FF0070);
   justify-content: center;
@@ -272,3 +273,44 @@ body {
   border-left: 1px solid var(--decoration-line) ;
 }
 
+@media (min-width: 768px) {
+  .header-title{
+    --largest-title-font-size:clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  } 
+  .header__section-text {
+    max-width: calc((100vw - (var(--main-largest-padding) * 2)) / 2);
+  }
+  .main__section_content:nth-child(2n+1){
+    grid-template-columns: 0.97fr 2fr;  
+  }
+  .main__section-list {
+    display: grid;
+    grid-template-areas:  
+    "sunset sunset ice-cream"
+    "tape books ice-cream"
+    "tape street street";
+  }
+  .main__section-list-item {
+    display: flex;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header__section-text {
+    max-width: 491px;
+  }
+  .header .header__theme-menu {
+    display: flex;
+    justify-content: center;
+    align-content: top;
+  }
+  .header__theme-menu .header__theme-menu-list {
+    flex-direction: row;
+  }
+  .main__section_content:nth-child(2n) .main__section-text-block {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .main__section_content:nth-child(2n) .main__section-text-conteiner{
+    grid-template-rows: auto 1fr;
+  }
+} 

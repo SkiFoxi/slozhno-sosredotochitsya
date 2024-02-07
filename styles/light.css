@@ -3,22 +3,6 @@
   Здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */
-:root.theme-light {
-  --header-image: url(../images/cover-image-light.png);
-  --header-title-color:#FFC2E6;
-  --accent-title-color: #FF8DCB;
-  --decoration-style: none;
-  --header-list-item-color: #353430;
-  --decoration-line: #353430;
-  --main-title-color: #353430;
-  --main-text-color: #353430;
-  --main-subtitle-color: #353430;
-  --main-subtitle-background-color: #FF8DCB;
-  --website-main-background-color: #FFF1F7;
-  --link-color: #FF8DCB;
-  --menu-button-hover-color: 53, 52, 48, 0.4;    
-}
-
 .page.theme_light {
   --header-image: url(../images/cover-image-light.png);
   --header-title-color:#FFC2E6;
