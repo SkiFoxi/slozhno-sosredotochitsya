@@ -22,6 +22,8 @@ body {
   position: relative;
   display: grid;
   background-image: var(--header-image);
+  background-repeat: no-repeat;
+  background-size: cover;
   grid-template-rows: 1fr 1fr 1fr;
   height: 100vh; /*Изменяется*/
   padding: var(--main-largest-padding);  /* будет меняться при изменении width*/
