@@ -177,19 +177,40 @@ body {
 }
 
 .main__section-picture {
-
+  width: 100%;
 }
 
 .main__section-list {
-
+  width: 100%;
+  gap: 20px
 }
 
 .main__section-list-item {
-
 }
 
 .main__section-icon {
   width: 100%;
+  object-fit: cover;
+}
+
+.main__section-icon-sunset {
+  grid-area: sunset;
+}
+
+.main__section-icon-ice-cream {
+  grid-area: ice-cream;
+}
+
+.main__section-icon-tape {
+  grid-area: tape;
+}
+
+.main__section-icon-books {
+  grid-area: books;
+}
+
+.main__section-icon-street {
+  grid-area: street;
 }
 
 .main__section-subtitle-picture {
