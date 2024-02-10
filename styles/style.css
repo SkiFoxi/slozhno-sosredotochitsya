@@ -273,10 +273,8 @@ body {
     padding-left: var(--main-largest-padding);
   }
   .header__section-text {
-    padding-right: 15%;
-  }
-  .header__section-text {
     max-width: calc((100vw - (var(--main-largest-padding) * 2)) / 2);
+    padding-right: 15%;
   }
   .main__section_content:nth-child(2n+1){
     grid-template-columns: 1fr 2fr;  
@@ -290,7 +288,7 @@ body {
     "sunset sunset ice-cream"
     "tape books ice-cream"
     "tape street street";
-    gap:20px
+    gap: 20px;
   }
   .main__section-icon-sunset {
     grid-area: sunset;
@@ -320,7 +318,7 @@ body {
   .header .header__theme-menu {
     display: flex;
     justify-content: center;
-    align-content: top;
+    align-content: start;
   }
   .header__theme-menu .header__theme-menu-list {
     flex-direction: row;
